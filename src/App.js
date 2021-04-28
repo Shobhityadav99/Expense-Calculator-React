@@ -4,7 +4,7 @@ import ExpenseItem from './Components/ExpenseItem';
 function App() {
   return (
     <div className="App">
-        <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
