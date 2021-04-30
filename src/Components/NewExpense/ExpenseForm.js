@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ExpensesFilter from './ExpenseFilter';
-import './ExpenseFilter.css';
 import './ExpenseForm.css';
 const ExpenseForm = (props) => {
     const [enteredTitle, setenteredTitle] = useState('');
@@ -31,7 +29,6 @@ const ExpenseForm = (props) => {
     }
     return <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
-            <ExpensesFilter />
             <div className="new-expense__control">
                 <label>Title</label>
                 <input type="text" onChange={titleChangeHandler} value={enteredTitle} />
