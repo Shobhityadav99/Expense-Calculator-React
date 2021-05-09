@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import './ExpenseForm.css';
 const ExpenseForm = (props) => {
     const [enteredTitle, setenteredTitle] = useState('');
@@ -13,15 +14,13 @@ const ExpenseForm = (props) => {
     const dateChangeHandler = (event) => {
         setenteredDate(event.target.value);
     }
-
     const submitHandler = (event) => {
         event.preventDefault();
-
         const expenseData = {
             title: enteredTitle,
             amount: +enteredAmount,
             date: new Date(enteredDate),
-          };
+        };
         props.onSaveExpenseData(expenseData);
         setenteredAmount('');
         setenteredDate('');
@@ -43,8 +42,8 @@ const ExpenseForm = (props) => {
             </div>
         </div>
         <div className="new-expense__actions">
-            <button type="button" onClick={props.onCancel}>Cancel</button>
-            <button type="submit">Add Expenses</button>
+            <Button variant="outline-primary" type="button" onClick={props.onCancel}>Cancel</Button>{' '}
+            <Button variant="primary" type="submit">Add Expenses</Button>{' '}
         </div>
     </form>
 }
