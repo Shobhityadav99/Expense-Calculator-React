@@ -6,7 +6,7 @@ import NewExpense from './Components/NewExpense/NewExpense';
 const DUMMY_EXPENSES = [
   {
     id: 'e1',
-    title: 'Toilet Paper',
+    title: 'Credit Card Bill',
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
@@ -19,9 +19,15 @@ const DUMMY_EXPENSES = [
   },
   {
     id: 'e4',
-    title: 'New Desk (Wooden)',
+    title: 'New Table',
     amount: 450,
     date: new Date(2021, 5, 12),
+  },
+  {
+    id: 'e5',
+    title: 'New Refrigerator',
+    amount: 142.12,
+    date: new Date(2020, 3, 4),
   },
 ];
 
